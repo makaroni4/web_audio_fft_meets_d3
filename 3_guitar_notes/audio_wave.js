@@ -80,7 +80,7 @@ function AudioWaveChart(className, freqRange) {
       var data_xy  = [];
 
       for(var i = 0; i < wave.length; i++){
-        data_xy.push({x: i, y: wave[i]});
+        data_xy.push({x: i, y: Math.pow(10, 5 + wave[i] / 10)});
       }
 
       plotD3Wave(data_xy);

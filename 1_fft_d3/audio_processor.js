@@ -17,10 +17,6 @@ function AudioProcessor() {
 
   this.sendingAudioData = false;
 
-  this.lastNoteEnergy = 0;
-  this.wave_power_threshold = 0.006;
-  this.last_note_time = -1;
-
   var timeBufferChart = new AudioWaveChart("js-time-buffer");
   var waveBufferChart = new AudioWaveChart("js-wave-buffer");
 
