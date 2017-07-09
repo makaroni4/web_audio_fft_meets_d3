@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3. FFT in guitar range with notes marks</title>
+
+  <style type="text/css" media="screen">
+    .audio-wave + .audio-wave {
+      margin-top: 40px;
+    }
+
+    .audio-wave__header {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+      color: #816DC2;
+    }
+
+    .audio-wave__plot {
+      width: 800px;
+      height: 250px;
+
+      border: 1px solid #B8C5D6;
+      border-radius: 2px;
+    }
+
+    .audio-wave__plot svg {
+      overflow: overlay;
+    }
+
+    .audio-wave__plot path {
+      stroke: red;
+      stroke-width: 1;
+      fill: none;
+      opacity: 0.5;
+    }
+
+    .guitar-note-line {
+      stroke: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="audio-wave">
+    <div class="audio-wave__header">
+      1. Wave buffer for high E-string
+    </div>
+
+    <div class="audio-wave__plot js-guitar-wave-buffer">
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script>
+  <script src="3_guitar_notes/audio_wave.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="3_guitar_notes/audio_processor.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="3_guitar_notes/app.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>

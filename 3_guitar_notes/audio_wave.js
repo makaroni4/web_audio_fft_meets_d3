@@ -28,6 +28,33 @@ function AudioWaveChart(className, freqRange) {
 
   var axisBot = d3.axisBottom(mapScale);
 
+  var stringFreqs = [
+    [329.6, "E"],
+    [349.2, "F"],
+    [370.0, "F#"],
+    [392.0, "G"],
+    [415.3, "G#"],
+    [440.0, "A"],
+    [466.1, "A#"],
+    [493.8, "B"],
+    [523.2, "C"],
+    [554.3, "C#"],
+    [587.3, "D"],
+    [622.2, "D#"],
+    [659.2, "E"]
+  ];
+
+  stringFreqs.forEach(function(row) {
+    var freq = row[0];
+
+    graph.append("svg:line")
+         .attr("class", "guitar-note-line")
+         .attr("x1", mapScale(freq))
+         .attr("y1", h)
+         .attr("x2", mapScale(freq))
+         .attr("y2", 0);
+  })
+
   var xsCont = graph.append('g')
     .attr("transform", "translate(0," + h + ")")
     .call(axisBot);
